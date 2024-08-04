@@ -40,7 +40,7 @@ int main() //<- A calling function
     // USER INPUT
     int Age;
     printf("What is your age? \n");
-    scanf("%d", &Age); //& is a Pointer, used for scanf only
+    scanf("%d", &Age); //& is a referencer, used for scanf only
     printf("You're %d years old.", Age);
     double Gpa;
     printf(" But what about your GPA? \n");
@@ -55,7 +55,7 @@ int main() //<- A calling function
 
     printf("Your GPA is %.2f. \n", gpa);
     printf("Forgot to ask, but what's your nickname again? \n");
-    char Name[30]; // Add * to change a character to a string of characters
+    char Name[30];
     scanf("%s", &Name);
     // fgets gets a whole line of text, whereas scanf ignores texts after [space].
     // stdin = Standard Input
@@ -120,7 +120,7 @@ void sayHi(char username[], int age) // void = a function that doesn't return an
 double cube(double num)
 {
     //    double result = pow(num, 3);
-    // or  double result = num*num*num;
+    // or double result = num*num*num;
     // return result;
     return pow(num, 3);
 }
