@@ -9,18 +9,15 @@ Section: 3
 
 #include <stdio.h>
 
-int main()
-{
+int main() {
   int year;
   scanf("%d", &year);
 
-  // Leap years are divisible by 4, but not by 100, unless also divisible by 400.
-  if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
-  {
+  // Leap years are divisible by 4, but not by 100, unless also divisible by
+  // 400.
+  if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
     printf("Leap");
-  }
-  else
-  {
+  } else {
     printf("Common");
   }
   return 0;
