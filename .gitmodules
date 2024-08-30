@@ -1,0 +1,15 @@
+[submodule "Labs/Labs/671-lab3-q1-waris-sri"]
+	path = Labs/Labs/671-lab3-q1-waris-sri
+	url = https://github.com/waris-sri/Learning-C.git
+[submodule "Labs/Labs/671-lab4-q1-waris-sri"]
+	path = Labs/Labs/671-lab4-q1-waris-sri
+	url = https://github.com/waris-sri/Learning-C.git
+[submodule "Labs/Labs/671-lab4-q2-waris-sri"]
+	path = Labs/Labs/671-lab4-q2-waris-sri
+	url = https://github.com/waris-sri/Learning-C.git
+[submodule "Labs/Labs/671-lab4-q3-waris-sri"]
+	path = Labs/Labs/671-lab4-q3-waris-sri
+	url = https://github.com/waris-sri/Learning-C.git
+[submodule "Labs/Labs/671-lab4-q4-waris-sri"]
+	path = Labs/Labs/671-lab4-q4-waris-sri
+	url = https://github.com/waris-sri/Learning-C.git
