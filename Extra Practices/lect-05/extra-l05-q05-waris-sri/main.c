@@ -12,8 +12,8 @@ Section: 3
 int main(void) {
   /*
     Reference (n = 13):
-    ↓ diagonal left to right (row = column)
-                            ↓ diagonal right to left (n-i-1 = column)
+    | diagonal left to right (row = column)
+    ↓                       ↓ diagonal right to left (n-1-i = column)
     * - - - - - - - - - - - *
     * * - - - - - - - - - * *
     * - * - - - - - - - * - *
@@ -27,18 +27,17 @@ int main(void) {
     * - * - - - - - - - * - *
     * * - - - - - - - - - * *
     * - - - - - - - - - - - *
-                ↑
-      otherwise, print dash
+    ↑            ↑
+    |  otherwise, print dash
+    side stars = (j == 0 || j == n - 1), first and last columns
   */
-  // TODO: print side stars
   int n;
   do {
     scanf("%d", &n);
   } while (!((n > 1) && (n % 2 != 0)));
-  int mid = n / 2;
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < n; j++) {
-      if (j == i || j == n - i - 1) {
+      if (j == 0 || j == n - 1 || j == i || j == n - 1 - i) {
         printf("* ");
       } else {
         printf("- ");
