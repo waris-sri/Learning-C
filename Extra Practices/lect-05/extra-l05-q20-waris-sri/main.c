@@ -19,6 +19,10 @@ int main(void) {
   // Maximum leaf width
   int max_width = 2 * n + 1;
 
+  // Customize leaf character
+  char leaf;
+  scanf(" %c", &leaf);
+
   while (cnt < n) {
     for (int k = 0; k <= cnt + 1; k++) {
       // Left spaces
@@ -27,14 +31,14 @@ int main(void) {
       }
       // Leaves
       for (int i = 0; i < 2 * k + 1; i++) {
-        printf("*");
+        printf("%c", leaf);
       }
       printf("\n");
     }
     cnt++;
   }
 
-  // Trunk
+  // Stem
   for (int i = 0; i < 1; i++) {
     for (int j = 0; j < (max_width - 3) / 2; j++) {
       printf(" ");
