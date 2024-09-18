@@ -14,22 +14,22 @@ int main(void) {
 
   do {
     scanf("%d", &n);
-  } while (!((n > 1) && (n % 2 != 0)));
+  } while (!(n > 1 && n % 2 != 0));
 
-  // Maximum leaf width
+  // max leaf width (at the bottom)
   int max_width = 2 * n + 1;
 
-  // Customize leaf character
+  // customize leaf character (optional)
   char leaf;
   scanf(" %c", &leaf);
 
   while (cnt < n) {
     for (int k = 0; k <= cnt + 1; k++) {
-      // Left spaces
+      // left spaces
       for (int i = max_width - 2 * k - 1; i > 0; i -= 2) {
         printf(" ");
       }
-      // Leaves
+      // leaves
       for (int i = 0; i < 2 * k + 1; i++) {
         printf("%c", leaf);
       }
@@ -38,7 +38,7 @@ int main(void) {
     cnt++;
   }
 
-  // Stem
+  // tree trunk
   for (int i = 0; i < 1; i++) {
     for (int j = 0; j < (max_width - 3) / 2; j++) {
       printf(" ");

@@ -19,7 +19,7 @@ int main() {
 
   printf("\n");
 
-  // Triangle and Diamond
+  // Diamond
   // upper
   for (int i = 0; i < N; i++) {
     for (int k = N; k > i; k--) {
