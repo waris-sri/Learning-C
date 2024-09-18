@@ -1,6 +1,7 @@
 #include <stdio.h>
 #define N 5
 int main() {
+  // Upside-down right-angled triangle
   for (int i = N; i > 0; i--) {
     for (int j = 0; j < i; j++) {
       printf("#");
@@ -8,7 +9,8 @@ int main() {
     printf("\n");
   }
 
-  for (int i = 0; i <= N; i++) {
+  // Upright right-angled triangle
+  for (int i = 0; i < N; i++) {
     for (int j = 0; j < i; j++) {
       printf("#");
     }
@@ -93,7 +95,7 @@ int main() {
 
   printf("\n");
 
-  // Skewed parallelogram
+  // Rotated rhombus
   // upper
   for (int i = 1; i < N; i++) {
     for (int k = N; k > i; k--) {
