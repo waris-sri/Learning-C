@@ -12,7 +12,7 @@ Section: 3
 int main(void) {
   /*
     Reference (n = 13):
-    | diagonal left to right (row = column)
+    ↓ diagonal left to right (row = column)
     ↓                       ↓ diagonal right to left (n-1-i = column)
     * - - - - - - - - - - - *
     * * - - - - - - - - - * *
@@ -28,7 +28,7 @@ int main(void) {
     * * - - - - - - - - - * *
     * - - - - - - - - - - - *
     ↑            ↑
-    |  otherwise, print dash
+    ↑  otherwise, print dash
     side stars = (j == 0 || j == n - 1), first and last columns
   */
   int n;
