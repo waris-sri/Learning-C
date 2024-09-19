@@ -14,35 +14,39 @@ int main(void) {
   do {
     scanf("%d", &n);
   } while (!(n > 1));
-
   // upper
-  for (int i = 1; i <= n; i++) {
+  for (int i = 0; i <= n; i++) {
     // left stars
-    for (int j = 1; j <= i; j++) {
+    for (int j = 0; j < i; j++) {
       printf("*");
     }
     // middle dots
-    for (int j = 1; j <= 2 * (n - i) - 1; j++) {
+    for (int j = 0; j <= 2 * (n - i); j++) {
       printf(".");
     }
     // right stars
-    for (int j = 1; j <= i; j++) {
+    for (int j = 0; j < i; j++) {
       printf("*");
     }
     printf("\n");
   }
+  // middle stars
+  for (int i = 0; i < 2 * n + 1; i++) {
+    printf("*");
+  }
+  printf("\n");
   // lower
-  for (int i = n - 1; i >= 1; i--) {
+  for (int i = n; i >= 0; i--) {
     // left stars
-    for (int j = 1; j <= i; j++) {
+    for (int j = 0; j < i; j++) {
       printf("*");
     }
     // middle dots
-    for (int j = 1; j <= 2 * (n - i) - 1; j++) {
+    for (int j = 0; j <= 2 * (n - i); j++) {
       printf(".");
     }
     // right stars
-    for (int j = 1; j <= i; j++) {
+    for (int j = 0; j < i; j++) {
       printf("*");
     }
     printf("\n");
