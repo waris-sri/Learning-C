@@ -41,7 +41,8 @@ int main(void) {
   printf("Global Maximum: %.2f\nGlobal Minimum: %.2f\n", max, min);
 
   // max and min scores from all labs, 1 student
-  float sumRow[5] = {0};
+  float sumRow[5] = {0}; // `{0}` because this uses the same logic with
+                         // initializing `sum = 0` first in non-arrays
   float sumEach = 0;
   for (int i = 0; i < 5; i++) {
     for (int j = 0; j < 3; j++) {
