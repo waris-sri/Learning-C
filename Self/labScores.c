@@ -1,3 +1,5 @@
+// Week 7 Code Example (Multidimensional Array)
+
 #include <stdio.h>
 
 int main(void) {
