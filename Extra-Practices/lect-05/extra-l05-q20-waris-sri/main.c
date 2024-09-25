@@ -26,7 +26,7 @@ int main(void) {
   scanf(" %c", &leaf);
 
   while (cnt < n) {
-    for (int k = 0; k <= cnt + 1; k++) {
+    for (int k = 0; k <= cnt; k++) {
       // left spaces
       for (int i = max_width - 2 * k - 1; i > 0; i -= 2) {
         printf(" ");
