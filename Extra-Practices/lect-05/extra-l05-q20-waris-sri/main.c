@@ -13,6 +13,7 @@ int main(void) {
   int n, cnt = 0;
 
   do {
+    printf("[Odd number]\n");
     scanf("%d", &n);
   } while (!(n > 1 && n % 2 != 0));
 
@@ -20,6 +21,7 @@ int main(void) {
   int max_width = 2 * n + 1;
 
   // customize leaf character (optional)
+  printf("[Customize leaf character]\n");
   char leaf;
   scanf(" %c", &leaf);
 
