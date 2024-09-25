@@ -62,20 +62,24 @@ int main(void) {
 
   for (int i = 0; i <= 2 * n; i++) {
     for (int j = 0; j < 2 * n + 1; j++) {
+      // up left wing
       if (j <= i && i <= n) {
-        // upper left wing
         printf("*");
-      } else if (j >= 2 * n - i && i <= n) {
-        // upper right wing
+      }
+      // up right wing
+      else if (j >= 2 * n - i && i <= n) {
         printf("*");
-      } else if (j <= 2 * n - i && i > n) {
-        // lower left wing
+      }
+      // down left wing
+      else if (j <= 2 * n - i && i > n) {
         printf("*");
-      } else if (j >= i && i > n) {
-        // lower right wing
+      }
+      // down right wing
+      else if (j >= i && i > n) {
         printf("*");
-      } else {
-        // center dots
+      }
+      // center dots
+      else {
         printf(".");
       }
     }
