@@ -8,21 +8,19 @@ Section: 3
 */
 
 #include <stdio.h>
+#define N 4
 
 int main(void) {
-
-  int n, cnt = 0;
-  scanf("%d", &n);
-
-  int max_width = n + 1;
-  char sequence[] = {'T', 'A', 'S', 'T', 'Y'};
+  int cnt = 0;
+  int max_width = N + 1;
+  char sequence[] = {'J', 'A', 'P', 'A', 'N'};
   int seq_len = 5;
 
-  while (cnt < n) {
+  while (cnt < N) {
     int section_lines = cnt + 2; // cnt starts from 0
     for (int k = 0; k <= cnt + 1; k++) {
       // Left spaces
-      for (int i = max_width - k - 1; i > 0; i--) {
+      for (int i = max_width - k - 1; i >= 0; i--) {
         printf(" ");
       }
       // if it's the last line of each section, print letters only
@@ -59,7 +57,7 @@ int main(void) {
 
   // Trunk
   for (int i = 0; i < 2; i++) {
-    for (int j = 0; j < (max_width / 2) + 1; j++) {
+    for (int j = 0; j < (max_width / 2) + 2; j++) {
       printf(" ");
     }
     printf("|||\n");
