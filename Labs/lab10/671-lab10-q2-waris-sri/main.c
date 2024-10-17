@@ -7,7 +7,7 @@ int n_gt;
 
 int count_gt(int v) {
 
-  int n_gt = 0;
+  int n_gt;
 
   ////////////// Start of your code ////////////////
 
