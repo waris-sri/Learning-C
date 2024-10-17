@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-#define MIN_VAL -4
-#define MAX_VAL 42
+int MIN_VAL = -4;
+int MAX_VAL = 42;
 
 int clip_value(int v) {
   if (v < MIN_VAL) {
