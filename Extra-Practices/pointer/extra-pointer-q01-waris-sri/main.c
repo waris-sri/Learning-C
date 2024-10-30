@@ -26,6 +26,7 @@ void sort(int *array) {
       // `array[sorted_idx + 1] = array[sorted_idx]`
       *(array + sorted_idx + 1) = *(array + sorted_idx);
       // move to the previous element in the sorted portion
+      // (start from right to left)
       sorted_idx = sorted_idx - 1;
     }
     // insert 'current' into its correct position within the sorted numbers
