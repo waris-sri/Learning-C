@@ -51,3 +51,33 @@ int main(void) {
   sort(nums);
   return 0;
 }
+
+/*
+VISUALIZATION
+
+Iteration when `current` = 2:
+
+Index:       0   1   2   3
+Initial:     4   5   6   2
+             ↑
+       `sorted_idx` = 2
+
+Comparisons and Shifts:
+1. Compare 6 > 2 → True, shift 6 to index 3
+   Array:    4   5   6   6
+             ↑
+       `sorted_idx` = 1
+
+2. Compare 5 > 2 → True, shift 5 to index 2
+   Array:    4   5   5   6
+             ↑
+       `sorted_idx` = 0
+
+3. Compare 4 > 2 → True, shift 4 to index 1
+   Array:    4   4   5   6
+             ↑
+       `sorted_idx` = -1
+
+Insertion: insert 2 at index 0 (sorted_idx + 1)
+Final Array: 2   4   5   6
+*/
