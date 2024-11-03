@@ -23,11 +23,7 @@ int main() {
 
   ///// Start of you code /////
   // TODO: Replace with max value with 42 using `p_max`
-  for (int i = 0; i < n; i++) {
-    if (arr[i] == *p_max) {
-      arr[i] = 42;
-    }
-  }
+  *p_max = 42;
   ///// End of you code /////
 
   for (int i = 0; i < n; i++) {
