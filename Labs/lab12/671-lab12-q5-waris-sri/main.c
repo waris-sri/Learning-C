@@ -15,6 +15,11 @@ void sort_values(int *x, int *y, int *z) {
     swap(x, y);
   if (*y > *z)
     swap(y, z);
+  // after swapping y and z, y's new value could now be less than x
+  // so we need to check x vs y one more time to ensure proper ordering
+  // comparing x and z is unnecessary because:
+  // - if x > y and y > z, then x > z by transitivity
+  // - if x < y and y > z, we check x vs y again to ensure order
   if (*x > *y)
     swap(x, y);
 }

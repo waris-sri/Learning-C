@@ -24,6 +24,9 @@ int main(void) {
   }
   // after swapping s2 and s3, s2's new value could now be less than s1
   // so we need to check s1 vs s2 one more time to ensure proper ordering
+  // comparing s1 and s3 is unnecessary because:
+  // - if s1 > s2 and s2 > s3, then s1 > s3 by transitivity
+  // - if s1 < s2 and s2 > s3, we check s1 vs s2 again to ensure order
   if (strcmp(s1, s2) > 0) {
     swap(s1, s2);
   }
