@@ -32,7 +32,7 @@ int find_max(int *arr, int n_elems) {
   return max;
 }
 
-void func1(int *arr, int n) {
+void square(int *arr, int n) {
   for (int i = 0; i < n; i++) {
     arr[i] = arr[i] * arr[i];
   }
@@ -61,10 +61,10 @@ int main() {
   int nums[N] = {4, -5, 7, 99, 0};
   printf("\n\nmax from passing by ref = %d", find_max(nums, N));
 
-  // for func1
-  printf("\n\nfunc1: ");
+  // for square
+  printf("\n\nsquare: ");
   int arr[5] = {-5, 3, 4, 1, 8};
-  func1(arr, 5);
+  square(arr, 5);
   int i;
   for (i = 0; i < 5; i++) {
     printf("%d ", arr[i]);

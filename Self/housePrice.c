@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int main() {
   struct HousePrice {
     float size;
