@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 
 #define MAX_LINE_LEN 150
 #define MAX_COURSE_LEN 120
@@ -18,8 +19,22 @@ struct Course {
   // END 1
 };
 
-int convert_char_to_int(char c, int *out);
+// Convert a single character into its numerical value
+// For example: '5' becomes 5
+// Returns 1 if conversion successful, 0 if character is not a digit
+// Result is stored in the `out` parameter
+int convert_char_to_int(
+    char c,
+    int *out); // `out` is a pointer to store the converted integer result
+
+// Convert a letter grade (A, B+, B, etc) into its numerical equivalent
+// Returns 1 if conversion successful, 0 if invalid grade
+// Result is stored in the out parameter
 int convert_str_to_grade(char str[], float *out);
+
+// Parse a CSV line of course information into its components
+// Extracts course ID, name, credits and grade into the provided parameters
+// Uses `convert_char_to_int()` and `convert_str_to_grade()` for conversion
 void parse_course(char line[], char *course_id, char *course_name, int *credit,
                   float *grade);
 
@@ -28,9 +43,9 @@ void parse_course(char line[], char *course_id, char *course_name, int *credit,
 //         - compute_gpa
 // (Look from the code hints in `main()`)
 
-// Function prototype (declaration) for create_course function
-// Takes a char array line[] as input parameter
-// Returns a `struct Course` as the function's return type
+// Function prototype for `create_course` function
+// Takes a char array `line[]` as input parameter
+// Returns a struct `Course` as the function's return type
 struct Course create_course(char line[]);
 float compute_gpa(struct Course courses[], int n, char status[]);
 // END 2
@@ -130,9 +145,25 @@ void parse_course(char line[], char *course_id, char *course_name, int *credit,
 
 // TODO 4: Define the function create_course
 //         This function must call `parse_course`
+
+// Declares a function named `create_course` that takes a char array (`line[]`)
+// as input and returns a struct `Course`. The function will parse the input
+// line and create a new `Course` struct containing the course details
 struct Course create_course(char line[]) {
+
+  // Create a new `Course` struct to store course information
   struct Course c;
+
+  // Parse the input line to extract course details
+  // `parse_course` will fill in:
+  // - `c.id` with the course ID
+  // - `c.name` with the full course name
+  // - `c.credit` with the number of credits
+  // - `c.grade` with the numeric grade value
+  // We pass pointers (&) to credit and grade since they need to be modified
   parse_course(line, c.id, c.name, &c.credit, &c.grade);
+
+  // Return the populated `Course` struct
   return c;
 };
 // END 4

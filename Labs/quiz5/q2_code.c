@@ -63,9 +63,13 @@ int main() {
 // TODO 3: Define the function
 int containsKeyword(char *title, char *keyword) {
   int lenT = strlen(title), lenK = strlen(keyword);
+  // `match` indicates if the current position in title matches the entire
+  // keyword, `found` tracks if we've found any successful match anywhere in the
+  // title
   int match, found = 0;
   for (int i = 0; i <= lenT - lenK; i++) {
-    // put `match` inside the loop b/c for each new starting position
+    // Reset `match` for checking each new starting position in title
+    // Put `match` inside the loop because for each new starting position
     // in the title we check is a new potential match attempt.
     match = 1;
     for (int j = 0; j < lenK; j++) {
@@ -74,6 +78,7 @@ int containsKeyword(char *title, char *keyword) {
         break;
       }
     }
+    // If we found a match at current position, set found flag and exit
     if (match) {
       found = 1;
       break;
