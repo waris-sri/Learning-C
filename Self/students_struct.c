@@ -9,7 +9,7 @@ int main() {
 
   struct Student student[2];
   float sum = 0;
-  char newline;
+  char newline = '\n';
 
   for (int i = 0; i < 2; i++) {
     fgets(student[i].name, 50, stdin);

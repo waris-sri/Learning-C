@@ -3,21 +3,21 @@
 
 void min(int *a, int *b, int *c) {
   // compare the VALUES dereferenced FROM the pointers
-  if (*a > *b && *b > *c)
-    printf("min = %d", *c);
-  else if (*a < *b && *b < *c)
+  if (*a <= *b && *a <= *c)
     printf("min = %d", *a);
-  else
+  else if (*b <= *a && *b <= *c)
     printf("min = %d", *b);
+  else
+    printf("min = %d", *c);
 }
 
 void max(int *a, int *b, int *c) {
-  if (*a > *b && *b > *c)
+  if (*a >= *b && *a >= *c)
     printf("max = %d", *a);
-  else if (*a < *b && *b < *c)
-    printf("max = %d", *c);
-  else
+  else if (*b >= *a && *b >= *c)
     printf("max = %d", *b);
+  else
+    printf("max = %d", *c);
 }
 
 // pass by reference
@@ -43,7 +43,7 @@ void calc_sum(int *ints, int m) {
   for (int i = 0; i < m; i++) {
     sum += ints[i];
   }
-  printf("\n\ncalc_sum = %d", sum);
+  printf("calc_sum = %d", sum);
 }
 
 int main() {
@@ -59,20 +59,21 @@ int main() {
 
   // pass by ref
   int nums[N] = {4, -5, 7, 99, 0};
-  printf("\n\nmax from passing by ref = %d", find_max(nums, N));
+  printf("\n\n{4, -5, 7, 99, 0}\n");
+  printf("max from passing by ref = %d", find_max(nums, N));
 
   // for square
-  printf("\n\nsquare: ");
+  printf("\n\nSquare: {-5, 3, 4, 1, 8}\n");
   int arr[5] = {-5, 3, 4, 1, 8};
   square(arr, 5);
-  int i;
-  for (i = 0; i < 5; i++) {
+  for (int i = 0; i < 5; i++) {
     printf("%d ", arr[i]);
   }
 
   // calc sum (of squared indices)
   int m = 5;
   int ints[m];
+  printf("\n\nSum of squared indices:\n");
   for (int k = 0; k < m; k++) {
     ints[k] = k * k;
   }
