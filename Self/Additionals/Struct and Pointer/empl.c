@@ -17,7 +17,7 @@ struct Employees {
 
 // initialize the pointer as `*employee` from `Employees` struct
 // deference from the pointer for getting `salary` member with `*employee`
-// (*employee).salary is equivalent to employee->salary in functionality
+// `(*employee).salary` is equivalent to `employee->salary` in functionality
 void updateSalary(struct Employees *employee) {
   (*employee).salary = (*employee).salary + ((*employee).salary * 0.1);
 }
